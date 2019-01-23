@@ -16,6 +16,7 @@ class BookRepository {
     )
 
     // *****************************************************************************************
+    // see Oreilly Safari: Hands-On Microservices with Kotlin by Juan Antonio Medina Iglesias
     // NOTE:  another neat way of creating a small data store is as follow:
     val altBookStore = arrayOf(
             Book("10", "Title ten", "John Ten", Instant.now()),

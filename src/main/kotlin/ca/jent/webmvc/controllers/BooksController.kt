@@ -31,6 +31,17 @@ class BooksController {
         val b: Book = booksService.updateBook(book) ?: return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null)
 
         return ResponseEntity.status(HttpStatus.OK).body(b)
+
+        /*
+        I think the above should be:
+        val b: Book? = booksService.updateBook(book)
+        return if (b != null) {
+                    ResponseEntity(b, HttpStatus.OK)
+               } else {
+                    ResponseEntity(ErrorResponse("Book not found", "specific here"), HttpStatus.NOT_FOUND)
+               }
+         */
+
     }
 
 }
